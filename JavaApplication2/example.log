@@ -1,222 +1,341 @@
-2021-09-26 DEBUG [main] (Client.java:40) - 
-RESPONSE:
+2021-09-29 DEBUG [main] (SSLConnectionSocketFactory.java:380) -  peer alternative names: [*.dataaccess.com, dataaccess.com]
+2021-09-29 DEBUG [main] (SSLConnectionSocketFactory.java:384) -  issuer principal: CN=COMODO RSA Domain Validation Secure Server CA, O=COMODO CA Limited, L=Salford, ST=Greater Manchester, C=GB
+2021-09-29 DEBUG [main] (DefaultHttpClientConnectionOperator.java:147) - Connection established 192.168.1.76:49348<->52.7.155.169:443
+2021-09-29 DEBUG [main] (MainClientExec.java:233) - Executing request POST /webservicesserver/NumberConversion.wso?op=NumberToWords HTTP/1.1
+2021-09-29 DEBUG [main] (MainClientExec.java:238) - Target auth state: UNCHALLENGED
+2021-09-29 DEBUG [main] (MainClientExec.java:245) - Proxy auth state: UNCHALLENGED
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:135) - http-outgoing-0 >> POST /webservicesserver/NumberConversion.wso?op=NumberToWords HTTP/1.1
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:138) - http-outgoing-0 >> Host: www.dataaccess.com
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:138) - http-outgoing-0 >> Content-Type: text/xml; charset=utf-8
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:138) - http-outgoing-0 >> Content-Length: 265
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:138) - http-outgoing-0 >> Connection: keep-alive
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:138) - http-outgoing-0 >> User-Agent: Apache-HttpClient/5.0-alpha1 (Java/1.8.0_301)
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:138) - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "POST /webservicesserver/NumberConversion.wso?op=NumberToWords HTTP/1.1[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "Host: www.dataaccess.com[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "Content-Type: text/xml; charset=utf-8[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "Content-Length: 265[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "Connection: keep-alive[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "User-Agent: Apache-HttpClient/5.0-alpha1 (Java/1.8.0_301)[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "<?xml version="1.0" encoding="utf-8"?>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "<soap:Body>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "<NumberToWords xmlns="http://www.dataaccess.com/webservicesserver/">[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "<ubiNum>447</ubiNum>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "</NumberToWords>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "</soap:Body>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:85) - http-outgoing-0 >> "</soap:Envelope>"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "Cache-Control: private, max-age=0[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "Content-Type: text/xml; charset=utf-8[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "Server: Server[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "Web-Service: DataFlex 19.1[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "Date: Wed, 29 Sep 2021 16:21:58 GMT[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "Content-Length: 361[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "<?xml version="1.0" encoding="utf-8"?>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "  <soap:Body>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "    <m:NumberToWordsResponse xmlns:m="http://www.dataaccess.com/webservicesserver/">[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "      <m:NumberToWordsResult>four hundred and forty seven </m:NumberToWordsResult>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "    </m:NumberToWordsResponse>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "  </soap:Body>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:85) - http-outgoing-0 << "</soap:Envelope>"
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:124) - http-outgoing-0 << HTTP/1.1 200 OK
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:127) - http-outgoing-0 << Cache-Control: private, max-age=0
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:127) - http-outgoing-0 << Content-Type: text/xml; charset=utf-8
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:127) - http-outgoing-0 << Server: Server
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:127) - http-outgoing-0 << Web-Service: DataFlex 19.1
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:127) - http-outgoing-0 << Date: Wed, 29 Sep 2021 16:21:58 GMT
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:127) - http-outgoing-0 << Content-Length: 361
+2021-09-29 DEBUG [main] (MainClientExec.java:264) - Connection can be kept alive indefinitely
+2021-09-29 DEBUG [main] (PoolingHttpClientConnectionManager.java:319) - Connection [id: 0][route: {s}->https://www.dataaccess.com:443] can be kept alive indefinitely
+2021-09-29 DEBUG [main] (PoolingHttpClientConnectionManager.java:325) - Connection released: [id: 0][route: {s}->https://www.dataaccess.com:443][total kept alive: 1; route allocated: 1 of 5; total allocated: 1 of 25]
+2021-09-29  INFO [main] (Client.java:66) - 
+ ------------------------------------------------
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <m:NumberToWordsResponse xmlns:m="http://www.dataaccess.com/webservicesserver/">
+      <m:NumberToWordsResult>four hundred and forty seven </m:NumberToWordsResult>
+    </m:NumberToWordsResponse>
+  </soap:Body>
+</soap:Envelope>
+------------------------------------------------
+2021-09-29  INFO [main] (Client.java:67) - Response time, ms: 1042
+2021-09-29 DEBUG [main] (Client.java:48) - REQUEST:
 <?xml version="1.0" encoding="utf-8"?>
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
 <soap:Body>
 <NumberToWords xmlns="http://www.dataaccess.com/webservicesserver/">
-<ubiNum>2885</ubiNum>
+<ubiNum>3322</ubiNum>
 </NumberToWords>
 </soap:Body>
 </soap:Envelope>
-2021-09-26  INFO [main] (Client.java:75) - 
-Request Time, ms: 143
-2021-09-26 DEBUG [main] (Client.java:86) - 
-REQUEST: 
-<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">  <soap:Body>    <m:NumberToWordsResponse xmlns:m="http://www.dataaccess.com/webservicesserver/">      <m:NumberToWordsResult>two thousand eight hundred and eighty five </m:NumberToWordsResult>    </m:NumberToWordsResponse>  </soap:Body></soap:Envelope>
-2021-09-26  INFO [main] (Client.java:95) - 
-Full Code Time, ms: 1101
-2021-09-26 DEBUG [main] (Client.java:40) - RESPONSE:
+2021-09-29 DEBUG [main] (RequestAddCookies.java:122) - CookieSpec selected: default
+2021-09-29 DEBUG [main] (RequestAuthCache.java:73) - Auth cache not set in the context
+2021-09-29 DEBUG [main] (PoolingHttpClientConnectionManager.java:254) - Connection request: [route: {s}->https://www.dataaccess.com:443][total kept alive: 0; route allocated: 0 of 5; total allocated: 0 of 25]
+2021-09-29 DEBUG [main] (PoolingHttpClientConnectionManager.java:287) - Connection leased: [id: 0][route: {s}->https://www.dataaccess.com:443][total kept alive: 0; route allocated: 1 of 5; total allocated: 1 of 25]
+2021-09-29 DEBUG [main] (MainClientExec.java:212) - Opening connection {s}->https://www.dataaccess.com:443
+2021-09-29 DEBUG [main] (DefaultHttpClientConnectionOperator.java:140) - Connecting to www.dataaccess.com/52.7.155.169:443
+2021-09-29 DEBUG [main] (SSLConnectionSocketFactory.java:273) - Connecting socket to www.dataaccess.com/52.7.155.169:443 with timeout 180000
+2021-09-29 DEBUG [main] (SSLConnectionSocketFactory.java:326) - Enabled protocols: [TLSv1.2]
+2021-09-29 DEBUG [main] (SSLConnectionSocketFactory.java:327) - Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+2021-09-29 DEBUG [main] (SSLConnectionSocketFactory.java:331) - Starting handshake
+2021-09-29 DEBUG [main] (SSLConnectionSocketFactory.java:361) - Secure session established
+2021-09-29 DEBUG [main] (SSLConnectionSocketFactory.java:362) -  negotiated protocol: TLSv1.2
+2021-09-29 DEBUG [main] (SSLConnectionSocketFactory.java:363) -  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+2021-09-29 DEBUG [main] (SSLConnectionSocketFactory.java:371) -  peer principal: CN=*.dataaccess.com
+2021-09-29 DEBUG [main] (SSLConnectionSocketFactory.java:380) -  peer alternative names: [*.dataaccess.com, dataaccess.com]
+2021-09-29 DEBUG [main] (SSLConnectionSocketFactory.java:384) -  issuer principal: CN=COMODO RSA Domain Validation Secure Server CA, O=COMODO CA Limited, L=Salford, ST=Greater Manchester, C=GB
+2021-09-29 DEBUG [main] (DefaultHttpClientConnectionOperator.java:147) - Connection established 192.168.1.76:49366<->52.7.155.169:443
+2021-09-29 DEBUG [main] (MainClientExec.java:233) - Executing request POST /webservicesserver/NumberConversion.wso?op=NumberToWords HTTP/1.1
+2021-09-29 DEBUG [main] (MainClientExec.java:238) - Target auth state: UNCHALLENGED
+2021-09-29 DEBUG [main] (MainClientExec.java:245) - Proxy auth state: UNCHALLENGED
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:135) - http-outgoing-0 >> POST /webservicesserver/NumberConversion.wso?op=NumberToWords HTTP/1.1
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:138) - http-outgoing-0 >> Host: www.dataaccess.com
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:138) - http-outgoing-0 >> Content-Type: text/xml; charset=utf-8
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:138) - http-outgoing-0 >> Content-Length: 266
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:138) - http-outgoing-0 >> Connection: keep-alive
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:138) - http-outgoing-0 >> User-Agent: Apache-HttpClient/5.0-alpha1 (Java/1.8.0_301)
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:138) - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "POST /webservicesserver/NumberConversion.wso?op=NumberToWords HTTP/1.1[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "Host: www.dataaccess.com[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "Content-Type: text/xml; charset=utf-8[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "Content-Length: 266[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "Connection: keep-alive[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "User-Agent: Apache-HttpClient/5.0-alpha1 (Java/1.8.0_301)[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "<?xml version="1.0" encoding="utf-8"?>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "<soap:Body>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "<NumberToWords xmlns="http://www.dataaccess.com/webservicesserver/">[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "<ubiNum>3322</ubiNum>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "</NumberToWords>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "</soap:Body>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:85) - http-outgoing-0 >> "</soap:Envelope>"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "Cache-Control: private, max-age=0[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "Content-Type: text/xml; charset=utf-8[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "Server: Server[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "Web-Service: DataFlex 19.1[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "Date: Wed, 29 Sep 2021 16:22:51 GMT[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "Content-Length: 376[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "<?xml version="1.0" encoding="utf-8"?>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "  <soap:Body>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "    <m:NumberToWordsResponse xmlns:m="http://www.dataaccess.com/webservicesserver/">[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "      <m:NumberToWordsResult>three thousand three hundred and twenty two </m:NumberToWordsResult>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "    </m:NumberToWordsResponse>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "  </soap:Body>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:85) - http-outgoing-0 << "</soap:Envelope>"
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:124) - http-outgoing-0 << HTTP/1.1 200 OK
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:127) - http-outgoing-0 << Cache-Control: private, max-age=0
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:127) - http-outgoing-0 << Content-Type: text/xml; charset=utf-8
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:127) - http-outgoing-0 << Server: Server
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:127) - http-outgoing-0 << Web-Service: DataFlex 19.1
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:127) - http-outgoing-0 << Date: Wed, 29 Sep 2021 16:22:51 GMT
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:127) - http-outgoing-0 << Content-Length: 376
+2021-09-29 DEBUG [main] (MainClientExec.java:264) - Connection can be kept alive indefinitely
+2021-09-29 DEBUG [main] (PoolingHttpClientConnectionManager.java:319) - Connection [id: 0][route: {s}->https://www.dataaccess.com:443] can be kept alive indefinitely
+2021-09-29 DEBUG [main] (PoolingHttpClientConnectionManager.java:325) - Connection released: [id: 0][route: {s}->https://www.dataaccess.com:443][total kept alive: 1; route allocated: 1 of 5; total allocated: 1 of 25]
+2021-09-29  INFO [main] (Client.java:66) - 
+ RESPONSE:
+ 
+ ------------------------------------------------
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <m:NumberToWordsResponse xmlns:m="http://www.dataaccess.com/webservicesserver/">
+      <m:NumberToWordsResult>three thousand three hundred and twenty two </m:NumberToWordsResult>
+    </m:NumberToWordsResponse>
+  </soap:Body>
+</soap:Envelope>
+------------------------------------------------
+2021-09-29  INFO [main] (Client.java:67) - Response time, ms: 1063
+2021-09-29 DEBUG [main] (Client.java:48) - REQUEST:
 <?xml version="1.0" encoding="utf-8"?>
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
 <soap:Body>
 <NumberToWords xmlns="http://www.dataaccess.com/webservicesserver/">
-<ubiNum>4544</ubiNum>
+<ubiNum>5108</ubiNum>
 </NumberToWords>
 </soap:Body>
 </soap:Envelope>
-2021-09-26  INFO [main] (Client.java:75) - Request Time, ms: 150
-2021-09-26 DEBUG [main] (Client.java:86) - REQUEST: 
-<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">  <soap:Body>    <m:NumberToWordsResponse xmlns:m="http://www.dataaccess.com/webservicesserver/">      <m:NumberToWordsResult>four thousand five hundred and forty four </m:NumberToWordsResult>    </m:NumberToWordsResponse>  </soap:Body></soap:Envelope>
-2021-09-26  INFO [main] (Client.java:95) - Full Code Time, ms: 1128
-2021-09-26 DEBUG [main] (Client.java:40) - RESPONSE:
+2021-09-29 DEBUG [main] (RequestAddCookies.java:122) - CookieSpec selected: default
+2021-09-29 DEBUG [main] (RequestAuthCache.java:73) - Auth cache not set in the context
+2021-09-29 DEBUG [main] (PoolingHttpClientConnectionManager.java:254) - Connection request: [route: {s}->https://www.dataaccess.com:443][total kept alive: 0; route allocated: 0 of 5; total allocated: 0 of 25]
+2021-09-29 DEBUG [main] (PoolingHttpClientConnectionManager.java:287) - Connection leased: [id: 0][route: {s}->https://www.dataaccess.com:443][total kept alive: 0; route allocated: 1 of 5; total allocated: 1 of 25]
+2021-09-29 DEBUG [main] (MainClientExec.java:212) - Opening connection {s}->https://www.dataaccess.com:443
+2021-09-29 DEBUG [main] (DefaultHttpClientConnectionOperator.java:140) - Connecting to www.dataaccess.com/52.7.155.169:443
+2021-09-29 DEBUG [main] (SSLConnectionSocketFactory.java:273) - Connecting socket to www.dataaccess.com/52.7.155.169:443 with timeout 180000
+2021-09-29 DEBUG [main] (SSLConnectionSocketFactory.java:326) - Enabled protocols: [TLSv1.2]
+2021-09-29 DEBUG [main] (SSLConnectionSocketFactory.java:327) - Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+2021-09-29 DEBUG [main] (SSLConnectionSocketFactory.java:331) - Starting handshake
+2021-09-29 DEBUG [main] (SSLConnectionSocketFactory.java:361) - Secure session established
+2021-09-29 DEBUG [main] (SSLConnectionSocketFactory.java:362) -  negotiated protocol: TLSv1.2
+2021-09-29 DEBUG [main] (SSLConnectionSocketFactory.java:363) -  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+2021-09-29 DEBUG [main] (SSLConnectionSocketFactory.java:371) -  peer principal: CN=*.dataaccess.com
+2021-09-29 DEBUG [main] (SSLConnectionSocketFactory.java:380) -  peer alternative names: [*.dataaccess.com, dataaccess.com]
+2021-09-29 DEBUG [main] (SSLConnectionSocketFactory.java:384) -  issuer principal: CN=COMODO RSA Domain Validation Secure Server CA, O=COMODO CA Limited, L=Salford, ST=Greater Manchester, C=GB
+2021-09-29 DEBUG [main] (DefaultHttpClientConnectionOperator.java:147) - Connection established 192.168.1.76:49377<->52.7.155.169:443
+2021-09-29 DEBUG [main] (MainClientExec.java:233) - Executing request POST /webservicesserver/NumberConversion.wso?op=NumberToWords HTTP/1.1
+2021-09-29 DEBUG [main] (MainClientExec.java:238) - Target auth state: UNCHALLENGED
+2021-09-29 DEBUG [main] (MainClientExec.java:245) - Proxy auth state: UNCHALLENGED
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:135) - http-outgoing-0 >> POST /webservicesserver/NumberConversion.wso?op=NumberToWords HTTP/1.1
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:138) - http-outgoing-0 >> Host: www.dataaccess.com
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:138) - http-outgoing-0 >> Content-Type: text/xml; charset=utf-8
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:138) - http-outgoing-0 >> Content-Length: 266
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:138) - http-outgoing-0 >> Connection: keep-alive
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:138) - http-outgoing-0 >> User-Agent: Apache-HttpClient/5.0-alpha1 (Java/1.8.0_301)
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:138) - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "POST /webservicesserver/NumberConversion.wso?op=NumberToWords HTTP/1.1[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "Host: www.dataaccess.com[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "Content-Type: text/xml; charset=utf-8[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "Content-Length: 266[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "Connection: keep-alive[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "User-Agent: Apache-HttpClient/5.0-alpha1 (Java/1.8.0_301)[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "<?xml version="1.0" encoding="utf-8"?>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "<soap:Body>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "<NumberToWords xmlns="http://www.dataaccess.com/webservicesserver/">[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "<ubiNum>5108</ubiNum>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "</NumberToWords>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "</soap:Body>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:85) - http-outgoing-0 >> "</soap:Envelope>"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "Cache-Control: private, max-age=0[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "Content-Type: text/xml; charset=utf-8[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "Server: Server[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "Web-Service: DataFlex 19.1[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "Date: Wed, 29 Sep 2021 16:23:19 GMT[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "Content-Length: 368[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "<?xml version="1.0" encoding="utf-8"?>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "  <soap:Body>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "    <m:NumberToWordsResponse xmlns:m="http://www.dataaccess.com/webservicesserver/">[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "      <m:NumberToWordsResult>five thousand one hundred and eight </m:NumberToWordsResult>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "    </m:NumberToWordsResponse>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "  </soap:Body>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:85) - http-outgoing-0 << "</soap:Envelope>"
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:124) - http-outgoing-0 << HTTP/1.1 200 OK
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:127) - http-outgoing-0 << Cache-Control: private, max-age=0
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:127) - http-outgoing-0 << Content-Type: text/xml; charset=utf-8
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:127) - http-outgoing-0 << Server: Server
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:127) - http-outgoing-0 << Web-Service: DataFlex 19.1
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:127) - http-outgoing-0 << Date: Wed, 29 Sep 2021 16:23:19 GMT
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:127) - http-outgoing-0 << Content-Length: 368
+2021-09-29 DEBUG [main] (MainClientExec.java:264) - Connection can be kept alive indefinitely
+2021-09-29 DEBUG [main] (PoolingHttpClientConnectionManager.java:319) - Connection [id: 0][route: {s}->https://www.dataaccess.com:443] can be kept alive indefinitely
+2021-09-29 DEBUG [main] (PoolingHttpClientConnectionManager.java:325) - Connection released: [id: 0][route: {s}->https://www.dataaccess.com:443][total kept alive: 1; route allocated: 1 of 5; total allocated: 1 of 25]
+2021-09-29  INFO [main] (Client.java:66) - 
+ RESPONSE:
+ ------------------------------------------------
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <m:NumberToWordsResponse xmlns:m="http://www.dataaccess.com/webservicesserver/">
+      <m:NumberToWordsResult>five thousand one hundred and eight </m:NumberToWordsResult>
+    </m:NumberToWordsResponse>
+  </soap:Body>
+</soap:Envelope>
+------------------------------------------------
+2021-09-29  INFO [main] (Client.java:67) - Response time, ms: 1057
+2021-09-29 DEBUG [main] (Client.java:48) - REQUEST:
 <?xml version="1.0" encoding="utf-8"?>
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
 <soap:Body>
 <NumberToWords xmlns="http://www.dataaccess.com/webservicesserver/">
-<ubiNum>6790</ubiNum>
+<ubiNum>9512</ubiNum>
 </NumberToWords>
 </soap:Body>
 </soap:Envelope>
-2021-09-26  INFO [main] (Client.java:75) - Request Time, ms: 133
-2021-09-26 DEBUG [main] (Client.java:86) - REQUEST: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">  <soap:Body>    <m:NumberToWordsResponse xmlns:m="http://www.dataaccess.com/webservicesserver/">      <m:NumberToWordsResult>six thousand seven hundred and ninety </m:NumberToWordsResult>    </m:NumberToWordsResponse>  </soap:Body></soap:Envelope>
-2021-09-26  INFO [main] (Client.java:95) - Full Code Time, ms: 1035
-2021-09-26 DEBUG [main] (Client.java:44) - RESPONSE:
+2021-09-29 DEBUG [main] (RequestAddCookies.java:122) - CookieSpec selected: default
+2021-09-29 DEBUG [main] (RequestAuthCache.java:73) - Auth cache not set in the context
+2021-09-29 DEBUG [main] (PoolingHttpClientConnectionManager.java:254) - Connection request: [route: {s}->https://www.dataaccess.com:443][total kept alive: 0; route allocated: 0 of 5; total allocated: 0 of 25]
+2021-09-29 DEBUG [main] (PoolingHttpClientConnectionManager.java:287) - Connection leased: [id: 0][route: {s}->https://www.dataaccess.com:443][total kept alive: 0; route allocated: 1 of 5; total allocated: 1 of 25]
+2021-09-29 DEBUG [main] (MainClientExec.java:212) - Opening connection {s}->https://www.dataaccess.com:443
+2021-09-29 DEBUG [main] (DefaultHttpClientConnectionOperator.java:140) - Connecting to www.dataaccess.com/52.7.155.169:443
+2021-09-29 DEBUG [main] (SSLConnectionSocketFactory.java:273) - Connecting socket to www.dataaccess.com/52.7.155.169:443 with timeout 180000
+2021-09-29 DEBUG [main] (SSLConnectionSocketFactory.java:326) - Enabled protocols: [TLSv1.2]
+2021-09-29 DEBUG [main] (SSLConnectionSocketFactory.java:327) - Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+2021-09-29 DEBUG [main] (SSLConnectionSocketFactory.java:331) - Starting handshake
+2021-09-29 DEBUG [main] (SSLConnectionSocketFactory.java:361) - Secure session established
+2021-09-29 DEBUG [main] (SSLConnectionSocketFactory.java:362) -  negotiated protocol: TLSv1.2
+2021-09-29 DEBUG [main] (SSLConnectionSocketFactory.java:363) -  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+2021-09-29 DEBUG [main] (SSLConnectionSocketFactory.java:371) -  peer principal: CN=*.dataaccess.com
+2021-09-29 DEBUG [main] (SSLConnectionSocketFactory.java:380) -  peer alternative names: [*.dataaccess.com, dataaccess.com]
+2021-09-29 DEBUG [main] (SSLConnectionSocketFactory.java:384) -  issuer principal: CN=COMODO RSA Domain Validation Secure Server CA, O=COMODO CA Limited, L=Salford, ST=Greater Manchester, C=GB
+2021-09-29 DEBUG [main] (DefaultHttpClientConnectionOperator.java:147) - Connection established 192.168.1.76:49454<->52.7.155.169:443
+2021-09-29 DEBUG [main] (MainClientExec.java:233) - Executing request POST /webservicesserver/NumberConversion.wso?op=NumberToWords HTTP/1.1
+2021-09-29 DEBUG [main] (MainClientExec.java:238) - Target auth state: UNCHALLENGED
+2021-09-29 DEBUG [main] (MainClientExec.java:245) - Proxy auth state: UNCHALLENGED
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:135) - http-outgoing-0 >> POST /webservicesserver/NumberConversion.wso?op=NumberToWords HTTP/1.1
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:138) - http-outgoing-0 >> Host: www.dataaccess.com
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:138) - http-outgoing-0 >> Content-Type: text/xml; charset=utf-8
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:138) - http-outgoing-0 >> Content-Length: 266
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:138) - http-outgoing-0 >> Connection: keep-alive
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:138) - http-outgoing-0 >> User-Agent: Apache-HttpClient/5.0-alpha1 (Java/1.8.0_301)
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:138) - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "POST /webservicesserver/NumberConversion.wso?op=NumberToWords HTTP/1.1[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "Host: www.dataaccess.com[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "Content-Type: text/xml; charset=utf-8[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "Content-Length: 266[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "Connection: keep-alive[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "User-Agent: Apache-HttpClient/5.0-alpha1 (Java/1.8.0_301)[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "<?xml version="1.0" encoding="utf-8"?>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "<soap:Body>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "<NumberToWords xmlns="http://www.dataaccess.com/webservicesserver/">[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "<ubiNum>9512</ubiNum>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "</NumberToWords>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 >> "</soap:Body>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:85) - http-outgoing-0 >> "</soap:Envelope>"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "Cache-Control: private, max-age=0[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "Content-Type: text/xml; charset=utf-8[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "Server: Server[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "Web-Service: DataFlex 19.1[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "Date: Wed, 29 Sep 2021 16:26:59 GMT[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "Content-Length: 370[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "<?xml version="1.0" encoding="utf-8"?>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "  <soap:Body>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "    <m:NumberToWordsResponse xmlns:m="http://www.dataaccess.com/webservicesserver/">[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "      <m:NumberToWordsResult>nine thousand five hundred and twelve </m:NumberToWordsResult>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "    </m:NumberToWordsResponse>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:71) - http-outgoing-0 << "  </soap:Body>[\r][\n]"
+2021-09-29 DEBUG [main] (Wire.java:85) - http-outgoing-0 << "</soap:Envelope>"
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:124) - http-outgoing-0 << HTTP/1.1 200 OK
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:127) - http-outgoing-0 << Cache-Control: private, max-age=0
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:127) - http-outgoing-0 << Content-Type: text/xml; charset=utf-8
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:127) - http-outgoing-0 << Server: Server
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:127) - http-outgoing-0 << Web-Service: DataFlex 19.1
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:127) - http-outgoing-0 << Date: Wed, 29 Sep 2021 16:26:59 GMT
+2021-09-29 DEBUG [main] (LoggingManagedHttpClientConnection.java:127) - http-outgoing-0 << Content-Length: 370
+2021-09-29 DEBUG [main] (MainClientExec.java:264) - Connection can be kept alive indefinitely
+2021-09-29 DEBUG [main] (PoolingHttpClientConnectionManager.java:319) - Connection [id: 0][route: {s}->https://www.dataaccess.com:443] can be kept alive indefinitely
+2021-09-29 DEBUG [main] (PoolingHttpClientConnectionManager.java:325) - Connection released: [id: 0][route: {s}->https://www.dataaccess.com:443][total kept alive: 1; route allocated: 1 of 5; total allocated: 1 of 25]
+2021-09-29  INFO [main] (Client.java:66) - 
+ RESPONSE:
+ ------------------------------------------------
 <?xml version="1.0" encoding="utf-8"?>
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
-<soap:Body>
-<NumberToWords xmlns="http://www.dataaccess.com/webservicesserver/">
-<ubiNum>6896</ubiNum>
-</NumberToWords>
-</soap:Body>
+  <soap:Body>
+    <m:NumberToWordsResponse xmlns:m="http://www.dataaccess.com/webservicesserver/">
+      <m:NumberToWordsResult>nine thousand five hundred and twelve </m:NumberToWordsResult>
+    </m:NumberToWordsResponse>
+  </soap:Body>
 </soap:Envelope>
-2021-09-26  INFO [main] (Client.java:79) - Request Time, ms: 137
-2021-09-26 DEBUG [main] (Client.java:90) - REQUEST: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">  <soap:Body>    <m:NumberToWordsResponse xmlns:m="http://www.dataaccess.com/webservicesserver/">      <m:NumberToWordsResult>six thousand eight hundred and ninety six </m:NumberToWordsResult>    </m:NumberToWordsResponse>  </soap:Body></soap:Envelope>
-2021-09-26  INFO [main] (Client.java:99) - Full Code Time, ms: 1164
-2021-09-26 DEBUG [main] (Client.java:44) - RESPONSE:
-<?xml version="1.0" encoding="utf-8"?>
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
-<soap:Body>
-<NumberToWords xmlns="http://www.dataaccess.com/webservicesserver/">
-<ubiNum>7796</ubiNum>
-</NumberToWords>
-</soap:Body>
-</soap:Envelope>
-2021-09-26  INFO [main] (Client.java:79) - Request Time, ms: 137
-2021-09-26 DEBUG [main] (Client.java:90) - REQUEST: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">  <soap:Body>    <m:NumberToWordsResponse xmlns:m="http://www.dataaccess.com/webservicesserver/">      <m:NumberToWordsResult>seven thousand seven hundred and ninety six </m:NumberToWordsResult>    </m:NumberToWordsResponse>  </soap:Body></soap:Envelope>
-2021-09-26  INFO [main] (Client.java:99) - Full Code Time, ms: 1061
-2021-09-26 DEBUG [main] (Client.java:44) - RESPONSE:
-<?xml version="1.0" encoding="utf-8"?>
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
-<soap:Body>
-<NumberToWords xmlns="http://www.dataaccess.com/webservicesserver/">
-<ubiNum>5033</ubiNum>
-</NumberToWords>
-</soap:Body>
-</soap:Envelope>
-2021-09-26  INFO [main] (Client.java:79) - Request Time, ms: 131
-2021-09-26 DEBUG [main] (Client.java:90) - REQUEST: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">  <soap:Body>    <m:NumberToWordsResponse xmlns:m="http://www.dataaccess.com/webservicesserver/">      <m:NumberToWordsResult>five thousand thirty three </m:NumberToWordsResult>    </m:NumberToWordsResponse>  </soap:Body></soap:Envelope>
-2021-09-26  INFO [main] (Client.java:99) - Full Code Time, ms: 1042
-2021-09-26 DEBUG [main] (Client.java:44) - RESPONSE:
-<?xml version="1.0" encoding="utf-8"?>
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
-<soap:Body>
-<NumberToWords xmlns="http://www.dataaccess.com/webservicesserver/">
-<ubiNum>2028</ubiNum>
-</NumberToWords>
-</soap:Body>
-</soap:Envelope>
-2021-09-26  INFO [main] (Client.java:79) - Request Time, ms: 134
-2021-09-26 DEBUG [main] (Client.java:90) - REQUEST: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">  <soap:Body>    <m:NumberToWordsResponse xmlns:m="http://www.dataaccess.com/webservicesserver/">      <m:NumberToWordsResult>two thousand twenty eight </m:NumberToWordsResult>    </m:NumberToWordsResponse>  </soap:Body></soap:Envelope>
-2021-09-26  INFO [main] (Client.java:99) - Full Code Time, ms: 1079
-2021-09-26 DEBUG [main] (Client.java:44) - RESPONSE:
-<?xml version="1.0" encoding="utf-8"?>
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
-<soap:Body>
-<NumberToWords xmlns="http://www.dataaccess.com/webservicesserver/">
-<ubiNum>4159</ubiNum>
-</NumberToWords>
-</soap:Body>
-</soap:Envelope>
-2021-09-26  INFO [main] (Client.java:79) - Request Time, ms: 135
-2021-09-26 DEBUG [main] (Client.java:90) - REQUEST: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">  <soap:Body>    <m:NumberToWordsResponse xmlns:m="http://www.dataaccess.com/webservicesserver/">      <m:NumberToWordsResult>four thousand one hundred and fifty nine </m:NumberToWordsResult>    </m:NumberToWordsResponse>  </soap:Body></soap:Envelope>
-2021-09-26  INFO [main] (Client.java:99) - Full Code Time, ms: 1098
-2021-09-26 DEBUG [main] (Client.java:44) - RESPONSE:
-<?xml version="1.0" encoding="utf-8"?>
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
-<soap:Body>
-<NumberToWords xmlns="http://www.dataaccess.com/webservicesserver/">
-<ubiNum>2408</ubiNum>
-</NumberToWords>
-</soap:Body>
-</soap:Envelope>
-2021-09-26  INFO [main] (Client.java:79) - Request Time, ms: 134
-2021-09-26 DEBUG [main] (Client.java:90) - REQUEST: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">  <soap:Body>    <m:NumberToWordsResponse xmlns:m="http://www.dataaccess.com/webservicesserver/">      <m:NumberToWordsResult>two thousand four hundred and eight </m:NumberToWordsResult>    </m:NumberToWordsResponse>  </soap:Body></soap:Envelope>
-2021-09-26  INFO [main] (Client.java:99) - Full Code Time, ms: 1072
-2021-09-26 DEBUG [main] (Client.java:44) - RESPONSE:
-<?xml version="1.0" encoding="utf-8"?>
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
-<soap:Body>
-<NumberToWords xmlns="http://www.dataaccess.com/webservicesserver/">
-<ubiNum>7585</ubiNum>
-</NumberToWords>
-</soap:Body>
-</soap:Envelope>
-2021-09-26  INFO [main] (Client.java:79) - Request Time, ms: 132
-2021-09-26 DEBUG [main] (Client.java:90) - REQUEST: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">  <soap:Body>    <m:NumberToWordsResponse xmlns:m="http://www.dataaccess.com/webservicesserver/">      <m:NumberToWordsResult>seven thousand five hundred and eighty five </m:NumberToWordsResult>    </m:NumberToWordsResponse>  </soap:Body></soap:Envelope>
-2021-09-26  INFO [main] (Client.java:99) - Full Code Time, ms: 1063
-2021-09-26 DEBUG [main] (Client.java:44) - RESPONSE:
-<?xml version="1.0" encoding="utf-8"?>
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
-<soap:Body>
-<NumberToWords xmlns="http://www.dataaccess.com/webservicesserver/">
-<ubiNum>400</ubiNum>
-</NumberToWords>
-</soap:Body>
-</soap:Envelope>
-2021-09-26  INFO [main] (Client.java:79) - Request Time, ms: 134
-2021-09-26 DEBUG [main] (Client.java:90) - REQUEST: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">  <soap:Body>    <m:NumberToWordsResponse xmlns:m="http://www.dataaccess.com/webservicesserver/">      <m:NumberToWordsResult>four hundred </m:NumberToWordsResult>    </m:NumberToWordsResponse>  </soap:Body></soap:Envelope>
-2021-09-26  INFO [main] (Client.java:99) - Full Code Time, ms: 1064
-2021-09-26 DEBUG [main] (Client.java:44) - RESPONSE:
-<?xml version="1.0" encoding="utf-8"?>
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
-<soap:Body>
-<NumberToWords xmlns="http://www.dataaccess.com/webservicesserver/">
-<ubiNum>4118</ubiNum>
-</NumberToWords>
-</soap:Body>
-</soap:Envelope>
-2021-09-26  INFO [main] (Client.java:79) - Request Time, ms: 134
-2021-09-26 DEBUG [main] (Client.java:90) - REQUEST: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">  <soap:Body>    <m:NumberToWordsResponse xmlns:m="http://www.dataaccess.com/webservicesserver/">      <m:NumberToWordsResult>four thousand one hundred and eighteen </m:NumberToWordsResult>    </m:NumberToWordsResponse>  </soap:Body></soap:Envelope>
-2021-09-26  INFO [main] (Client.java:99) - Full Code Time, ms: 1089
-2021-09-26 DEBUG [main] (Client.java:44) - RESPONSE:
-<?xml version="1.0" encoding="utf-8"?>
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
-<soap:Body>
-<NumberToWords xmlns="http://www.dataaccess.com/webservicesserver/">
-<ubiNum>1194</ubiNum>
-</NumberToWords>
-</soap:Body>
-</soap:Envelope>
-2021-09-26  INFO [main] (Client.java:79) - Request Time, ms: 134
-2021-09-26 DEBUG [main] (Client.java:90) - REQUEST: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">  <soap:Body>    <m:NumberToWordsResponse xmlns:m="http://www.dataaccess.com/webservicesserver/">      <m:NumberToWordsResult>one thousand one hundred and ninety four </m:NumberToWordsResult>    </m:NumberToWordsResponse>  </soap:Body></soap:Envelope>
-2021-09-26  INFO [main] (Client.java:99) - Full Code Time, ms: 1094
-2021-09-26 DEBUG [main] (Client.java:44) - RESPONSE:
-<?xml version="1.0" encoding="utf-8"?>
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
-<soap:Body>
-<NumberToWords xmlns="http://www.dataaccess.com/webservicesserver/">
-<ubiNum>4787</ubiNum>
-</NumberToWords>
-</soap:Body>
-</soap:Envelope>
-2021-09-26  INFO [main] (Client.java:79) - Request Time, ms: 140
-2021-09-26 DEBUG [main] (Client.java:90) - REQUEST: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">  <soap:Body>    <m:NumberToWordsResponse xmlns:m="http://www.dataaccess.com/webservicesserver/">      <m:NumberToWordsResult>four thousand seven hundred and eighty seven </m:NumberToWordsResult>    </m:NumberToWordsResponse>  </soap:Body></soap:Envelope>
-2021-09-26  INFO [main] (Client.java:99) - Full Code Time, ms: 1095
-2021-09-26 DEBUG [main] (Client.java:44) - RESPONSE:
-<?xml version="1.0" encoding="utf-8"?>
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
-<soap:Body>
-<NumberToWords xmlns="http://www.dataaccess.com/webservicesserver/">
-<ubiNum>1976</ubiNum>
-</NumberToWords>
-</soap:Body>
-</soap:Envelope>
-2021-09-26  INFO [main] (Client.java:79) - Request Time, ms: 129
-2021-09-26 DEBUG [main] (Client.java:90) - REQUEST: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">  <soap:Body>    <m:NumberToWordsResponse xmlns:m="http://www.dataaccess.com/webservicesserver/">      <m:NumberToWordsResult>one thousand nine hundred and seventy six </m:NumberToWordsResult>    </m:NumberToWordsResponse>  </soap:Body></soap:Envelope>
-2021-09-26  INFO [main] (Client.java:99) - Full Code Time, ms: 1058
-2021-09-26 DEBUG [main] (Client.java:44) - RESPONSE:
-<?xml version="1.0" encoding="utf-8"?>
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
-<soap:Body>
-<NumberToWords xmlns="http://www.dataaccess.com/webservicesserver/">
-<ubiNum>7613</ubiNum>
-</NumberToWords>
-</soap:Body>
-</soap:Envelope>
-2021-09-26  INFO [main] (Client.java:79) - Request Time, ms: 140
-2021-09-26 DEBUG [main] (Client.java:90) - REQUEST: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">  <soap:Body>    <m:NumberToWordsResponse xmlns:m="http://www.dataaccess.com/webservicesserver/">      <m:NumberToWordsResult>seven thousand six hundred and thirteen </m:NumberToWordsResult>    </m:NumberToWordsResponse>  </soap:Body></soap:Envelope>
-2021-09-26  INFO [main] (Client.java:99) - Full Code Time, ms: 1100
-2021-09-26 DEBUG [main] (Client.java:44) - RESPONSE:
-<?xml version="1.0" encoding="utf-8"?>
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
-<soap:Body>
-<NumberToWords xmlns="http://www.dataaccess.com/webservicesserver/">
-<ubiNum>6329</ubiNum>
-</NumberToWords>
-</soap:Body>
-</soap:Envelope>
-2021-09-26  INFO [main] (Client.java:79) - Request Time, ms: 130
-2021-09-26 DEBUG [main] (Client.java:90) - REQUEST: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">  <soap:Body>    <m:NumberToWordsResponse xmlns:m="http://www.dataaccess.com/webservicesserver/">      <m:NumberToWordsResult>six thousand three hundred and twenty nine </m:NumberToWordsResult>    </m:NumberToWordsResponse>  </soap:Body></soap:Envelope>
-2021-09-26  INFO [main] (Client.java:99) - Full Code Time, ms: 1083
-2021-09-26 DEBUG [main] (Client.java:44) - RESPONSE:
-<?xml version="1.0" encoding="utf-8"?>
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
-<soap:Body>
-<NumberToWords xmlns="http://www.dataaccess.com/webservicesserver/">
-<ubiNum>5554</ubiNum>
-</NumberToWords>
-</soap:Body>
-</soap:Envelope>
-2021-09-26  INFO [main] (Client.java:79) - Request Time, ms: 146
-2021-09-26 DEBUG [main] (Client.java:90) - REQUEST: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">  <soap:Body>    <m:NumberToWordsResponse xmlns:m="http://www.dataaccess.com/webservicesserver/">      <m:NumberToWordsResult>five thousand five hundred and fifty four </m:NumberToWordsResult>    </m:NumberToWordsResponse>  </soap:Body></soap:Envelope>
-2021-09-26  INFO [main] (Client.java:99) - Full Code Time, ms: 1073
+------------------------------------------------
+2021-09-29  INFO [main] (Client.java:67) - Response time, ms: 1052
