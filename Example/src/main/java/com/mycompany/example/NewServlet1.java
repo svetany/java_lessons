@@ -40,12 +40,6 @@ public class NewServlet1 extends HttpServlet {
     public Logger logger = LogManager.getLogger("servlet.name");
     static Random rnd = new Random();
 
-    @Override
-    public void init() {
-
-        logger.info("LOGGINGHEAR");
-
-    }
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -65,39 +59,32 @@ public class NewServlet1 extends HttpServlet {
                 String res;
                 int rndNum = rnd.nextInt(1000);
                 message = message.replace("unsignedLong", String.valueOf(rndNum));
-                if (req.equals("send SOAP message")) {
+                CloseableHttpClient httpClient = HttpClients.createDefault();
+                HttpPost httpPost = new HttpPost(site);
 
-                    CloseableHttpClient httpClient = HttpClients.createDefault();
-                    HttpPost httpPost = new HttpPost(site);
+                httpPost.setHeader("Host", "www.dataaccess.com");
+                httpPost.setHeader("Content-Type", "text/xml; charset=utf-8");
+                HttpEntity stringEntity = new StringEntity(message);
+                httpPost.setEntity(stringEntity);
 
-                    httpPost.setHeader("Host", "www.dataaccess.com");
-                    httpPost.setHeader("Content-Type", "text/xml; charset=utf-8");
-                    HttpEntity stringEntity = new StringEntity(message);
-                    httpPost.setEntity(stringEntity);
-
-                    long startRequest = System.currentTimeMillis();
-                    CloseableHttpResponse http_response = httpClient.execute(httpPost);
-                    long endResponse = System.currentTimeMillis();
-                    HttpEntity entity = http_response.getEntity();
-                    String resp = EntityUtils.toString(entity, StandardCharsets.UTF_8);
-                    boolean check_response = resp.contains("<m:NumberToWordsResult>");
-                    long time_response = endResponse - startRequest;
-                    res = "Успешный ответ: " + check_response + "\r\nВремя ответа:  " + time_response + "\r\nОтвет: " + resp;
-                    
-                    logger.info("try to send");
-                } else {
-                    res = "didn't send";
-                }
+                long startRequest = System.currentTimeMillis();
+                CloseableHttpResponse http_response = httpClient.execute(httpPost);
+                long endResponse = System.currentTimeMillis();
+                HttpEntity entity = http_response.getEntity();
+                String resp = EntityUtils.toString(entity, StandardCharsets.UTF_8);
+                boolean check_response = resp.contains("<m:NumberToWordsResult>");
+                long time_response = endResponse - startRequest;
+                res = "Успешный ответ: " + check_response + "\r\nВремя ответа:  " + time_response + "\r\nОтвет: " + resp;
 
                 logger.info("Result: " + res);
-                out.println(res);
+                
             } catch (Exception e) {
                 logger.error(e.getMessage(), e);
             }
         }
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+// <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
      *
