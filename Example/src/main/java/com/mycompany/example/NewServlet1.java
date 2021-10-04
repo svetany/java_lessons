@@ -9,6 +9,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.Random;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -34,12 +36,7 @@ import org.apache.log4j.Logger;
  */
 public class NewServlet1 extends HttpServlet {
 
-    /**
-     *
-     */
     public Logger logger = LogManager.getLogger("servlet.name");
-    static Random rnd = new Random();
-
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -57,8 +54,7 @@ public class NewServlet1 extends HttpServlet {
                         + "  </soap:Body>\n"
                         + "</soap:Envelope>";
                 String res;
-                int rndNum = rnd.nextInt(1000);
-                message = message.replace("unsignedLong", String.valueOf(rndNum));
+                message = message.replace("unsignedLong", req);
                 CloseableHttpClient httpClient = HttpClients.createDefault();
                 HttpPost httpPost = new HttpPost(site);
 
@@ -74,10 +70,18 @@ public class NewServlet1 extends HttpServlet {
                 String resp = EntityUtils.toString(entity, StandardCharsets.UTF_8);
                 boolean check_response = resp.contains("<m:NumberToWordsResult>");
                 long time_response = endResponse - startRequest;
-                res = "Успешный ответ: " + check_response + "\r\nВремя ответа:  " + time_response + "\r\nОтвет: " + resp;
 
-                logger.info("Result: " + res);
+                res = "Успешный ответ: " + check_response + "\r\nВремя ответа:  " + time_response + "\r\nОтвет: " + resp;
+                Pattern pattern = Pattern.compile("<m:NumberToWordsResult>(.+)</m:NumberToWordsResult>");
+                Matcher matcher = pattern.matcher(resp);
+                while (matcher.find()) {                    
+                    out.println(matcher.group(1).trim());
+                }
+
                 
+                
+                logger.info("Result: " + res);
+
             } catch (Exception e) {
                 logger.error(e.getMessage(), e);
             }
