@@ -8,17 +8,14 @@ package com.mycompany.example;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
-import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import org.apache.commons.io.IOUtils;
 import org.apache.log4j.LogManager;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.hc.client5.http.impl.sync.CloseableHttpClient;
 import org.apache.hc.client5.http.impl.sync.HttpClients;
 import org.apache.hc.client5.http.methods.CloseableHttpResponse;
@@ -46,14 +43,14 @@ public class NewServlet1 extends HttpServlet {
             try {
                 String site = "https://www.dataaccess.com/webservicesserver/NumberConversion.wso/NumberToWords/JSON";
                 String req = IOUtils.toString(request.getInputStream());
-                
+
                 String message = "{\n"
                         + "   \"ubiNum\": unsignedLong\n"
                         + "}";
-                
-                logger.info(message);
+
                 String res;
                 message = message.replace("unsignedLong", req);
+                logger.info(message);
                 CloseableHttpClient httpClient = HttpClients.createDefault();
                 HttpPost httpPost = new HttpPost(site);
                 httpPost.setHeader("Host", "www.dataaccess.com");
@@ -70,15 +67,14 @@ public class NewServlet1 extends HttpServlet {
                 long time_response = endResponse - startRequest;
                 Pattern pattern = Pattern.compile("\"(.+)\"");
                 Matcher matcher = pattern.matcher(resp);
-                while (matcher.find()) {                    
+                while (matcher.find()) {
                     resp = (matcher.group(1).trim());
                 }
                 res = "Успешный ответ: " + check_response + "\r\nВремя ответа:  " + time_response + "\r\nОтвет: " + resp;
-                                 
-                    out.print("{");
-                    out.print("\"result\" : " + "\"" + resp + "\"");
-                    out.print("}");
-                
+
+                out.print("{");
+                out.print("\"result\" : " + "\"" + resp + "\"");
+                out.print("}");
 
                 logger.info("Result: " + res);
 
