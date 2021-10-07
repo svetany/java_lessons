@@ -1,37 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.mycompany.example;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.nio.charset.StandardCharsets;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.io.IOUtils;
 import org.apache.log4j.LogManager;
-import org.apache.hc.client5.http.impl.sync.CloseableHttpClient;
-import org.apache.hc.client5.http.impl.sync.HttpClients;
-import org.apache.hc.client5.http.methods.CloseableHttpResponse;
-import org.apache.hc.client5.http.methods.HttpPost;
-import org.apache.hc.core5.http.Header;
-import org.apache.hc.core5.http.HttpEntity;
-import org.apache.hc.core5.http.ParseException;
-import org.apache.hc.core5.http.entity.ContentType;
-import org.apache.hc.core5.http.entity.EntityUtils;
-import org.apache.hc.core5.http.entity.StringEntity;
 import org.apache.log4j.Logger;
+import com.ibm.icu.text.RuleBasedNumberFormat;
+import java.util.Locale;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 
-/**
- *
- * @author Svetlana
- */
 public class NewServlet1 extends HttpServlet {
 
     public Logger logger = LogManager.getLogger("servlet.name");
@@ -41,42 +23,20 @@ public class NewServlet1 extends HttpServlet {
         response.setContentType("application/json;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             try {
-                String site = "https://www.dataaccess.com/webservicesserver/NumberConversion.wso/NumberToWords/JSON";
                 String req = IOUtils.toString(request.getInputStream());
+                Object obj = new JSONParser().parse(req);
+                JSONObject jo = (JSONObject) obj;
+                String number = (String) jo.get("ubiNum");
+                String languageTag = (String) jo.get("language_tag");
 
-                String message = "{\n"
-                        + "   \"ubiNum\": unsignedLong\n"
+                RuleBasedNumberFormat nf = new RuleBasedNumberFormat(Locale.forLanguageTag(languageTag),
+                        RuleBasedNumberFormat.SPELLOUT);
+                String resp = "{\n"
+                        + "\"result\": \"string\",\n"
                         + "}";
-
-                String res;
-                message = message.replace("unsignedLong", req);
-                logger.info(message);
-                CloseableHttpClient httpClient = HttpClients.createDefault();
-                HttpPost httpPost = new HttpPost(site);
-                httpPost.setHeader("Host", "www.dataaccess.com");
-                httpPost.setHeader("Content-Type", "application/json; charset=utf-8");
-                HttpEntity stringEntity = new StringEntity(message);
-                httpPost.setEntity(stringEntity);
-
-                long startRequest = System.currentTimeMillis();
-                CloseableHttpResponse http_response = httpClient.execute(httpPost);
-                long endResponse = System.currentTimeMillis();
-                HttpEntity entity = http_response.getEntity();
-                String resp = EntityUtils.toString(entity, StandardCharsets.UTF_8);
-                boolean check_response = resp.contains("\"");
-                long time_response = endResponse - startRequest;
-                Pattern pattern = Pattern.compile("\"(.+)\"");
-                Matcher matcher = pattern.matcher(resp);
-                while (matcher.find()) {
-                    resp = (matcher.group(1).trim());
-                }
-                res = "Успешный ответ: " + check_response + "\r\nВремя ответа:  " + time_response + "\r\nОтвет: " + resp;
-
-                out.print("{");
-                out.print("\"result\" : " + "\"" + resp + "\"");
-                out.print("}");
-
-                logger.info("Result: " + res);
+                resp = resp.replace("string", nf.format(Long.valueOf(number)));
+                out.print(resp);
+                logger.info("number: " + number + " language: " + languageTag + " Spell: " + nf.format(Long.valueOf(number)));
 
             } catch (Exception e) {
                 logger.error(e.getMessage(), e);
