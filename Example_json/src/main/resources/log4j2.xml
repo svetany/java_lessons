@@ -23,7 +23,7 @@ filePattern="${APP_LOG_ROOT}/StubName-${date:yyyy-MM-dd}/ServletName-%d{yyyy-MM-
 </RollingFile>
 </Appenders>
 <Loggers>
-<Logger name="servlet.name" additivity="false" level="info">
+<Logger name="NumbersToWords_log" additivity="false" level="info">
 <AppenderRef ref="AppenderName" />
 </Logger>
 </Loggers>
